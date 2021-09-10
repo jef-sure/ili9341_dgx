@@ -1,7 +1,7 @@
 Clock with weather and automatic time synchronization
 ================================================== ====
 
-![Weather clock](./ display-320x240.jpg "Weather clock")
+![Weather clock](./display-320x240.jpg "Weather clock")
 
 
 # Peculiarities
