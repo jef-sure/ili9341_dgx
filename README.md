@@ -97,4 +97,6 @@ The weather symbols are taken from the [Weather Icons](https://erikflowers.githu
 They are slightly different from the information that the weather service returns, I had to
 come up with a display solution creatively.
 
+Short youtbe video:
+
 [![Watch example](./hqdefault.jpg)](https://www.youtube.com/watch?v=7H-2-X1M7PA)
