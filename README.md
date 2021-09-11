@@ -4,7 +4,7 @@ Clock with weather and automatic time synchronization
 ![Weather clock](./display-320x240.jpg "Weather clock")
 
 
-# Peculiarities
+# Features
 
 ## Display
   1. The numbers are written in a font similar to handwritten;
@@ -16,24 +16,27 @@ Clock with weather and automatic time synchronization
   6. Temperature is drawn with the same numbers as time.
   
 ## Implementation
-  1. Microcontroller [ESP32](https://esphome.io/devices/nodemcu_esp32.html) is used ;
+  1. Microcontroller [ESP32](https://esphome.io/devices/nodemcu_esp32.html) is used;
   2. This implementation uses a 320x240 display on the ILI9341 controller;
-  3. The graphics library used was written entirely independently;
-  4. The graphics library supports other common controllers,
+  3. The graphics library used was written entirely by me;
+  4. The graphics library supports other common controllers, and it
      can use multiple displays at the same time;
+     
+     ![2 screens](./2screens-640.jpg)
+     
   5. The graphics library supports not only physical, but also virtual
      screens that can then be combined and displayed on a physical screen;
   6. Fonts support an arbitrary set of `Code points`, you can output
      arbitrary `UTF-8` text.
      
 ## Animation
-  1. Each digit is a set of three cubic Bezier curves;
+  1. Each digit is a set of three cubic Bezier curves [link](https://github.com/jef-sure/ili9341_dgx/blob/main/main/main.c#L86);
   2. Each cubic Bézier curve requires 4 anchor points to draw;
   3. Many numbers could be depicted with only two curves, but this
      limits the possible path of the curved line, it may no longer always hit
      into the desired one, especially for the numbers 2 and 5;
   4. To morph one digit to another point of each curve linearly
-     move to the corresponding points of the resulting curve;
+     move to the corresponding points of the resulting curve [link](https://github.com/jef-sure/ili9341_dgx/blob/main/main/main.c#L392);
   5. After drawing all the necessary elements in the virtual screens, the
      calculating how much free time is left from the allotted 1/30 second and
      the drawing task sleeps for this remainder of time, passing control
