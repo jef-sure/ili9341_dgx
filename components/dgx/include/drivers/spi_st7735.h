@@ -1,3 +1,10 @@
+/*
+ * MIT License
+ *
+ * Copyright (c) 2021 Anton Petrusevich
+ *
+ */
+
 #ifndef _dgx_SPI_ST7735_H_
 #define _dgx_SPI_ST7735_H_
 #include "dgx_screen.h"

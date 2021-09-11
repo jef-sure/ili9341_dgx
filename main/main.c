@@ -1,3 +1,10 @@
+/*
+ * MIT License
+ *
+ * Copyright (c) 2021 Anton Petrusevich
+ *
+ */
+
 #include <math.h>
 #include <sys/time.h>
 

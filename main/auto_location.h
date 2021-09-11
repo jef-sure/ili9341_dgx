@@ -1,3 +1,10 @@
+/*
+ * MIT License
+ *
+ * Copyright (c) 2021 Anton Petrusevich
+ *
+ */
+
 #ifndef _AUTO_LOCATION_H_
 #define _AUTO_LOCATION_H_
 

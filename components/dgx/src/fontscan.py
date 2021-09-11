@@ -1,3 +1,9 @@
+"""
+ * MIT License
+ *
+ * Copyright (c) 2021 Anton Petrusevich
+ *
+"""
 import glob
 import os
 import re

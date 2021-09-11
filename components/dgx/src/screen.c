@@ -1,3 +1,10 @@
+/*
+ * MIT License
+ *
+ * Copyright (c) 2021 Anton Petrusevich
+ *
+ */
+
 #include "dgx_screen.h"
 uint8_t* dgx_fill_buf_value(uint8_t *lp, int16_t idx, uint32_t value, uint8_t lenbits) {
     if (lenbits == 1) {

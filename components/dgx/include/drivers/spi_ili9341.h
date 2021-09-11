@@ -1,3 +1,10 @@
+/*
+ * MIT License
+ *
+ * Copyright (c) 2021 Anton Petrusevich
+ *
+ */
+
 #ifndef _dgx_SPI_ILI_9341_H_
 #define _dgx_SPI_ILI_9341_H_
 #include "dgx_screen.h"

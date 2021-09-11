@@ -1,3 +1,10 @@
+/*
+ * MIT License
+ *
+ * Copyright (c) 2021 Anton Petrusevich
+ *
+ */
+
 #include <ctype.h>
 #include <ft2build.h>
 #include <stdint.h>

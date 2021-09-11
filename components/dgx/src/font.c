@@ -1,3 +1,10 @@
+/*
+ * MIT License
+ *
+ * Copyright (c) 2021 Anton Petrusevich
+ *
+ */
+
 #include "dgx_font.h"
 
 uint32_t decodeUTF8next(const char *chr, size_t *idx) {

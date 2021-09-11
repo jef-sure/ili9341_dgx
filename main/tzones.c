@@ -1,8 +1,8 @@
 /*
- * tzones.c
+ * MIT License
  *
- *  Created on: Mar 26, 2021
- *      Author: anton
+ * Copyright (c) 2021 Anton Petrusevich
+ *
  */
 
 #include <string.h>

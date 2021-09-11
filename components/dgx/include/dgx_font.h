@@ -1,3 +1,10 @@
+/*
+ * MIT License
+ *
+ * Copyright (c) 2021 Anton Petrusevich
+ *
+ */
+
 #ifndef _DGX_FONT_H_
 #define _DGX_FONT_H_
 

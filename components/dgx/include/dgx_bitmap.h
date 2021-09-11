@@ -1,3 +1,10 @@
+/*
+ * MIT License
+ *
+ * Copyright (c) 2021 Anton Petrusevich
+ *
+ */
+
 #ifndef _DGX_BITMAP_H_
 #define _DGX_BITMAP_H_
 

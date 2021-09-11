@@ -1,3 +1,10 @@
+/*
+ * MIT License
+ *
+ * Copyright (c) 2021 Anton Petrusevich
+ *
+ */
+
 #ifndef __TTF_SCREEN_H__
 #define __TTF_SCREEN_H__
 #ifdef __cplusplus

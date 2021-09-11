@@ -1,8 +1,8 @@
 /*
- * str.h
+ * MIT License
  *
- *  Created on: Mar 16, 2021
- *      Author: anton
+ * Copyright (c) 2021 Anton Petrusevich
+ *
  */
 
 #ifndef _STR_H_

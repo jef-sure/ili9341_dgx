@@ -1,3 +1,10 @@
+/*
+ * MIT License
+ *
+ * Copyright (c) 2021 Anton Petrusevich
+ *
+ */
+
 #include "dgx_interscreen.h"
 
 #define PIX12TORGB(r,g,b, ptr) \

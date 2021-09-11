@@ -1,3 +1,9 @@
+/*
+ * MIT License
+ *
+ * Copyright (c) 2021 Anton Petrusevich
+ *
+ */
 #ifndef MAIN_WEATHER_H_
 #define MAIN_WEATHER_H_
 

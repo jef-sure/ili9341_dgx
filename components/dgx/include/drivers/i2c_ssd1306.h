@@ -1,3 +1,10 @@
+/*
+ * MIT License
+ *
+ * Copyright (c) 2021 Anton Petrusevich
+ *
+ */
+
 #ifndef _SSD1366_H_
 #define _SSD1366_H_
 #include "dgx_screen.h"

@@ -1,3 +1,10 @@
+/*
+ * MIT License
+ *
+ * Copyright (c) 2021 Anton Petrusevich
+ *
+ */
+
 #include <string.h>
 #include <stdbool.h>
 #include "dgx_bitmap.h"

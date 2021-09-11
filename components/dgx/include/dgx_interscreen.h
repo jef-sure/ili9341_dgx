@@ -1,3 +1,10 @@
+/*
+ * MIT License
+ *
+ * Copyright (c) 2021 Anton Petrusevich
+ *
+ */
+
 #ifndef _DGX_INTERSCREEN_H_
 #define _DGX_INTERSCREEN_H_
 

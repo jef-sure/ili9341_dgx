@@ -1,3 +1,10 @@
+/*
+ * MIT License
+ *
+ * Copyright (c) 2021 Anton Petrusevich
+ *
+ */
+
 #ifndef HTTP_CLIENT_REQUEST_H_
 #define HTTP_CLIENT_REQUEST_H_
 

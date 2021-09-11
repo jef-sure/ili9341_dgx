@@ -1,3 +1,10 @@
+/*
+ * MIT License
+ *
+ * Copyright (c) 2021 Anton Petrusevich
+ *
+ */
+
 #include "http_client_request.h"
 #include "esp_http_client.h"
 #include "esp_log.h"
