@@ -103,3 +103,20 @@ come up with a display solution creatively.
 Short youtbe video:
 
 [![Watch example](./hqdefault.jpg)](https://www.youtube.com/watch?v=7H-2-X1M7PA)
+
+## Pins connection
+
+Display is connected to VSPI pins.
+
+| Display | Pin  |
+|---------|------|
+| GND     | GND  |
+| VCC     | 3.3V |
+| CLK     | 18   |
+| MOSI    | 23   |
+| RES     | 17   |
+| DC      | 16   |
+| BLK     | Vin  |
+| MISO    | 19   |
+
+
