@@ -461,11 +461,15 @@ uint8_t morphing_digits(morping_digit_t *mD, int mDNum, float t, uint32_t color,
     uint8_t udigits = 0;
     for (uint8_t di = 0; di < mDNum; ++di) {
         morping_digit_t *md = mD + di;
-        if (md->from == md->to) {
+        if (t != 1 && md->from == md->to) {
             continue;
         }
         udigits |= 1 << di;
-        dgx_fill_rectangle(md->scr, 0, 0, md->scr->width, md->scr->height, 0);
+        dgx_screen_t *scr = dgx_clone_vscreen_clear(md->scr);
+        if(scr == 0) {
+            scr = md->scr;
+            dgx_fill_rectangle(md->scr, 0, 0, md->scr->width, md->scr->height, 0);
+        }
         point_t curve[3][4];
         for (int i = 0; i < 3; ++i) {
             for (int j = 0; j < 4; ++j) {
@@ -473,9 +477,14 @@ uint8_t morphing_digits(morping_digit_t *mD, int mDNum, float t, uint32_t color,
             }
         }
         for (int i = 0; i < 3; ++i) {
-            cubic_bezier(md->scr, color, curve[i], thickness);
+            cubic_bezier(scr, color, curve[i], thickness);
         }
-        antialias_vscreen8(md->scr);
+        antialias_vscreen8(scr);
+        if(scr != md->scr) {
+            dgx_copy_vscreen(md->scr, scr);
+            scr->destroy(scr);
+            free(scr);
+        }
     }
     return udigits;
 }

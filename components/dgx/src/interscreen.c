@@ -6,6 +6,7 @@
  */
 
 #include "dgx_interscreen.h"
+#include <memory.h>
 
 #define PIX12TORGB(r,g,b, ptr) \
     do {\
@@ -260,6 +261,25 @@ dgx_screen_t* dgx_new_vscreen_from_region(dgx_screen_t *scr_src, int16_t x, int1
     }
     dgx_copy_region_from_vscreen(scr, 0, 0, scr_src, x, y, width, height, 0);
     return scr;
+}
+
+dgx_screen_t* dgx_clone_vscreen_clear(dgx_screen_t *scr_src) {
+    dgx_screen_t *scr = calloc(1, sizeof(dgx_screen_t));
+    if (!scr) return 0;
+    esp_err_t rc = dgx_v_init(scr, scr_src->width, scr_src->height, scr_src->color_bits);
+    if (rc != 0) {
+        free(scr);
+        return 0;
+    }
+    return scr;
+}
+
+bool dgx_copy_vscreen(dgx_screen_t *scr_dst, dgx_screen_t *scr_src) {
+    if (scr_src->height != scr_dst->height || scr_src->width != scr_dst->width || scr_src->color_bits != scr_dst->color_bits
+            || !scr_dst->frame_buffer || !scr_src->frame_buffer) return false;
+    uint32_t framebuf_size = ((uint32_t) scr_src->width * scr_src->height * scr_src->lcd_ram_bits + 7) / 8;
+    memcpy(scr_dst->frame_buffer, scr_src->frame_buffer, framebuf_size);
+    return true;
 }
 
 void dgx_vscreen8_to_screen16(dgx_screen_t *scr_dst, int16_t x_dst, int16_t y_dst, dgx_screen_t *scr_src, uint16_t *lut) {

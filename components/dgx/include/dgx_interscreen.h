@@ -26,6 +26,8 @@ void dgx_vscreen_to_vscreen(dgx_screen_t *scr_dst, int16_t x_dst, int16_t y_dst,
 void dgx_copy_region_from_vscreen(dgx_screen_t *scr_dst, int16_t x_dst, int16_t y_dst, dgx_screen_t *scr_src, int16_t x_src, int16_t y_src, int16_t width, int16_t height, uint32_t outer_color);
 dgx_screen_t* dgx_new_vscreen_from_region(dgx_screen_t *scr_src, int16_t x, int16_t y, int16_t width, int16_t height);
 void dgx_vscreen8_to_screen16(dgx_screen_t *scr_dst, int16_t x_dst, int16_t y_dst, dgx_screen_t *scr_src, uint16_t *lut);
+dgx_screen_t* dgx_clone_vscreen_clear(dgx_screen_t *scr_src);
+bool dgx_copy_vscreen(dgx_screen_t *scr_dst, dgx_screen_t *scr_src);
 
 #ifdef __cplusplus
 // @formatter:off
